@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container">
+    <h1> {{ target_user.first_name }} {{ target_user.last_name }}'s Page </h1>
+</div>
+{% for reflection in reflections %}
+<div class="container container-comment">
+    <a href="{{ url_for('show_journey', journey_slug=reflection['journeyid']) }}"><h3>{{ reflection['journeyname'] }}</h3></a>
+    <h4>{{ reflection['description']}}</h4>
+    {% if reflection.picture %}
+    <img src="{{ url_for('static', filename='cdn/{}'.format(reflection.picture)) }}">
+    {% endif %}
+</div>
+{% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container">
+    <h1>{{ journey_name }}</h1>
+</div>
+<div class="container container-full-width container-600-height" style="background-image:url({{ url_for('static', filename='cdn/{}'.format(journey_img_name)) }})"></div>
+<div class="container">
+    <h4>
+        {{ journey_description }}
+    </h4>
+</div>
+{% for reflection in reflections %}
+<div class="container container-comment">
+    <a href="{{ url_for('show_user', user_slug=reflection.name)}}"><button>{{reflection.name}}</button></a>
+    <h4>{{reflection.description}}</h4>
+    <h6>{{ reflection.date.strftime('%-m/%d/%Y %-I:%M %p')}}</h6>
+    {% if reflection.picture %}
+    <img src="{{ url_for('static', filename='cdn/{}'.format(reflection.picture)) }}">
+    {% endif %}
+</div>
+{% endfor %}
+{% if user.user_type == 'ADMIN' or user.user_type == 'STUDENT' %}
+<div class="container">
+    <h2>Add a reflection</h2>
+    <form action="#" method="POST" enctype="multipart/form-data">
+        {{ form.csrf_token }}
+        {{ form.description.label }} {{ form.description(class_='textarea') }}
+        {{ form.picture.label }} {{ form.picture }}
+        <button class="button is-primary">Submit</button>
+    </form>
+</div>
+<div class="container">
+    <a href="{{ url_for('show_feedback', journey_slug=journey_id) }}" class="button">
+        Private Feedback
+    </a>
+</div>
+{% endif %}
+{% endblock %}

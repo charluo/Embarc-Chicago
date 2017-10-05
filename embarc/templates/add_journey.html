@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body %}
+<section class="section">
+    <div class="container">
+        <h1 class="title">Add a New Journey</h1>
+        <form action="{{ url_for('add_journey') }}" method="POST" enctype="multipart/form-data">
+            <fieldset>
+                {{ form.csrf_token }}
+                <label>{{ form.name.label }}</label>{{ form.name(class_='input') }}
+                <label>{{ form.picture.label }}</label>{{ form.picture(class_='input') }}
+                <label>{{ form.description.label }}</label>{{ form.description(class_='textarea') }}
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+</section>
+{% endblock %}

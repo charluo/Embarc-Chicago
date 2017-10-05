@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container">
+    <h1>Create New Account</h1>
+    <form method="POST" action="{{ url_for('create_user') }}" role="form">
+        {{ form.csrf_token }}
+        <fieldset>
+            <label>{{ form.username.label }}</label>{{ form.username() }}
+            <label>{{ form.first_name.label }}</label>{{ form.first_name() }}
+            <label>{{ form.last_name.label }}</label>{{ form.last_name() }}
+            <label>{{ form.email.label }}</label>{{ form.email() }}
+            <label>{{ form.group.label }}</label>{{ form.group() }}
+            <label>{{ form.password.label }}</label>{{ form.password() }}
+            <label>{{ form.teacher_access_code.label }}</label>{{ form.teacher_access_code() }}
+            <button type="submit" class="btn btn-default">Submit</button>
+        </fieldset>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+  <div class="container">
+      <h1>Journey Feedback</h1>
+    <form method="POST" action="{{ url_for('show_feedback' , journey_slug=journeyid)}}" role="form">
+      {{ form.csrf_token }}
+      <h2>{{ journeyname }}</h2>
+      <fieldset>
+          <label>On a scale of 1 to 5 with 5 being the Strongest, How strongly
+           would you recommend this journey to a friend or another
+          Embarc class?</label>{{ form.rating() }}
+          <label>Why did you give the journey this rating?</label>{{ form.q1() }}
+          <label>What did you like best about this journey? (please do not respond
+             with the food - think about the EXPERIENCE!)</label>{{ form.q2() }}
+          <label>What would you add to this journey or how would you improve it?</label>{{ form.q3() }}
+          <label>What is one lesson you learned about yourself or the world that you will
+           take with you into the rest of the day/week/year/life?</label>{{ form.q4() }}
+          <label>Who is someone you met that you really enjoyed meeting? Why?</label>{{ form.q5() }}
+          <label>What is one cool/interesting/exciting thing from this journey that you
+           would tell someone about who was not on the journey?</label>{{ form.q6() }}
+          <button type="submit" class="btn btn-default">Submit</button>
+      </fieldset>
+    </form>
+  </div>
+{% endblock %}

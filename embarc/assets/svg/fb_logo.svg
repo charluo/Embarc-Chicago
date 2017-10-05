@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="94.153946mm"
+   height="94.154976mm"
+   viewBox="0 0 94.153946 94.154976"
+   version="1.1"
+   id="svg5259"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   sodipodi:docname="fb_logo.svg">
+  <defs
+     id="defs5253" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="115.56045"
+     inkscape:cy="208.68769"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1918"
+     inkscape:window-height="1060"
+     inkscape:window-x="0"
+     inkscape:window-y="18"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5256">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-72.363542,-72.273625)">
+    <g
+       id="g4690"
+       transform="matrix(0.35277777,0,0,-0.35277777,161.32102,166.4285)"
+       style="fill:#111111;fill-opacity:1">
+      <path
+         style="fill:#111111;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.33333325"
+         d="m 293.14062,273.16016 c -10.84933,0 -19.64062,8.79324 -19.64062,19.64257 v 316.57813 c 0,10.84533 8.79129,19.64062 19.64062,19.64062 h 170.4336 V 491.21484 h -46.37305 v -53.70703 h 46.37305 v -39.60742 c 0,-45.964 28.07217,-70.99219 69.07617,-70.99219 19.64,0 36.52141,1.46386 41.44141,2.11719 v 48.03516 l -28.44141,0.0117 c -22.29867,0 -26.61523,10.59715 -26.61523,26.14648 v 34.28906 h 53.18164 l -6.92383,53.70703 h -46.25781 v 137.80664 h 90.68164 c 10.84533,0 19.64062,-8.79529 19.64062,-19.64062 V 292.80273 c 0,-10.84933 -8.79529,-19.64257 -19.64062,-19.64257 z"
+         transform="matrix(0.75000002,0,0,-0.75000002,-457.28794,471.76584)"
+         id="path4692"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       id="g4694"
+       transform="matrix(0.35277777,0,0,-0.35277777,137.328,166.4285)" />
+  </g>
+</svg>

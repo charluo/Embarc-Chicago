@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve avery-website
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/avery-website
+Environment="PATH=/home/ubuntu/avery-website/venv/bin"
+ExecStart=/home/ubuntu/avery-website/venv/bin/uwsgi --ini avery-website.ini
+
+[Install]
+WantedBy=multi-user.target

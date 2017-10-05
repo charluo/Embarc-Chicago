@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    {% block head %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Journeys{% endblock %} | Embarc</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+    {% endblock %}
+</head>
+<body>
+    <main class="wrapper">
+        <nav class="navbar">
+            <div class="container">
+                <a href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='embarc-logo.png') }}">
+                </a>
+                <ul class="float-right">
+                    {% if user.is_authenticated %}
+                    <a class="button" href="{{url_for('show_user', user_slug=user.username)}}">Profile</a>
+                    <a class="button" href="{{url_for('logout')}}">Logout</a>
+                    {% else %}
+                    <a class="button" href="{{url_for('login')}}">Login</a>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul class=flashes>
+                {% for message in messages %}
+                <li><h4>{{ message }}</h4></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+        </div>
+        {% block body %}
+        {% endblock %}
+    </main>
+    {% block scripts %}
+    {% endblock %}
+</body>
+</html>

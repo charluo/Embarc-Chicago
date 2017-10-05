@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container">
+    <h1 class="title">Embarc Journeys</h1>
+</div>
+{% if user.user_type == 'ADMIN' %}
+<div class="container">
+    <a class="button" href="{{url_for('add_journey')}}">Add a Journey</a>
+    <a class="button" href="{{url_for('show_admin_feedback')}}">View Feedback</a>
+</div>
+{% endif %}
+{% for journey in journeys | reverse %}
+<a href="{{ url_for('show_journey', journey_slug=journey.id) }}">
+    <div class="container container-full-width container-600-height" style="background-image:url({{ url_for('static', filename='cdn/{}'.format(journey.picture)) }})">
+        <button>{{ journey.name }}</button>
+    </div>
+</a>
+{% endfor %}
+{% endblock %}

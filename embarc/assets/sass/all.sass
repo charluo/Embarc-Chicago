@@ -1,0 +1,98 @@
+@charset "utf-8"
+
+
+@import "../../../node_modules/milligram/src/Color"
+$color-bg: #f4f5f6
+$color-secondary: #000000
+$color-primary: #5bbfd6
+$color-white: #ffffff
+
+@import "../../../node_modules/milligram/src/milligram.sass"
+
+.button, button, input[type='button'], input[type='reset'], input[type='submit']
+    border-radius: 0
+    font-weight: 700
+    font-size: 2.0rem
+    line-height: 1
+    height: 4.0rem
+    letter-spacing: inherit
+    text-transform: inherit
+    padding: 1rem
+    margin-bottom: 2rem
+    margin-right: 2rem
+
+body
+    margin: 0
+    background-color: $color-bg
+    font-family: 'Source Sans Pro', sans-serif
+
+
+h1
+    margin-top: 5rem
+    margin-bottom: 2rem
+
+h1, h2, h3
+    font-weight: 700
+
+h1, h2, h3, h4
+    letter-spacing: inherit
+
+.navbar
+    height: 40px
+    width: 100%
+    top: 0
+    left: 0
+    background: $color-white
+    position: fixed
+    z-index: 1
+    overflow: hidden
+
+    ul
+        display: inline-block
+        list-style-type: none
+
+    .container
+        padding-bottom: 0.5rem
+
+    .button
+        position: relative
+
+.flashes
+    margin-top: 40px
+    list-style-type: none
+    
+
+.float-right
+    float: right
+
+.container-full-width
+    width: 100%
+    margin-bottom: 2rem
+    padding-top: 50%
+    padding-left: 2rem
+    background-size: cover
+
+    .button, button
+        position: static
+        top: -2rem
+        left: 2rem
+
+.container-comment
+  background-color: $color-white
+  padding: 2rem
+
+  button
+        margin-right: 2rem
+        margin-bottom: 0
+
+  h4
+        margin-bottom: 0
+
+.move-down
+    position: relative
+    top: 4rem
+    left: 2rem
+    z-index: 1
+
+input[type='email'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='url'], textarea, select
+    border-radius: 0
